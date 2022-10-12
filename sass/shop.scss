@@ -1,0 +1,1075 @@
+@font-face {
+    font-family: "wahu";
+    src: url("../fonts/wahu2.otf") format("opentype");
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "wahu";
+    box-sizing: border-box;
+    font-size: 10px;   
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url("../youkai/washi.jpg");
+    height:100%;
+    position: relative;
+}
+
+.window{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    
+    .window-past{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .noren{
+            position: absolute;
+            width: 40%;
+            height: 15%;
+            //padding-top: 10%;
+            left: 21%;
+            
+            //background-color: red;
+            background-image: url("../youkai/noren.png");
+            background-size: cover;
+        }
+        .noren-letter{
+            position: absolute;
+            font-size: 4vw;
+            color: white;
+            top: 6%;
+            left: 33%;
+        }
+        .kumo1{
+            position: absolute;
+            left: 65%;
+            width: 15%;
+            //height: 20%;
+            padding-top: 9%;
+            
+            background-image: url("../youkai/kumo-right.png");
+            background-size: cover;
+        }
+        .kumo2{
+            position: absolute;
+            left: 1%;
+            top: 3%;
+            width: 15%;
+            //height: 12%;
+            padding-top: 5%;
+            background-image: url("../youkai/kumo-left.png");
+            background-size: cover;
+        }
+    }
+}
+
+.header{
+    width: 15%;
+    height: 100%;
+    //background-color: rgb(208, 138, 206);
+    background-color: rgb(157, 108, 152);
+
+    position: fixed;
+    right: 0;
+    
+    
+    
+    .header-past{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+
+        .header-logo{
+            font-size: 2vw;
+            padding-top: 6%;
+            color: black;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    
+        .profile{
+            width: 70%;
+            //height: 70%;
+            padding-top: 60%;
+            //margin-top: 8%;
+            position: relative;
+            
+
+            &:hover .profile-maru{
+                width: 120%;
+                padding-top: 120%;
+                top: -14%;
+                right: -8%;
+                z-index: 10;
+                background-color: rgb(190, 190, 190,0);
+                animation: 1s linear alternate infinite youkaihover, 0.5s linear color1;
+                cursor: pointer;
+            }
+
+            @keyframes youkaihover{
+                0%{transform: rotate(-20deg);}
+                100%{transform: rotate(20deg);}
+            }
+            @keyframes color1{
+                0%{}
+                100%{background-color: rgb(190, 190, 190,0);}
+            }
+    
+            .profile-picture{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                padding-top: 100%;
+                background-image: url("../youkai/profile-maru.png");
+                background-size: cover;
+                
+                // span + .profile-maru{
+                //     background-color: red;
+                    
+                // }
+            }
+            .profile-maru{
+                position: absolute;
+                top: 7%;
+                right: 5%;
+                width: 90%;
+                padding-top: 90%;
+                border-radius: 50%;
+                background-image: url("../youkai/youkai10.png");
+                background-size: cover;
+                //background-color: rgb(141, 32, 126);  
+                transition: all 0.5s 0s ease;
+            }
+            
+        }
+        
+        .point{
+            width: 100%;
+            height: 10%;
+            position: relative;
+            .point-title{
+                font-size: 1.5vw;
+                position: absolute;
+                left: 20%;
+                top: 40%;
+            }
+            .point-value{
+                font-size: 2.5vw;
+                position: absolute;
+                right: 5%;
+                top: 23%;
+            }
+            .point-bar{
+                position: absolute;
+                width: 100%;
+                height: 80%;
+                //background-color: red;
+                top: 40%;
+                left: 5%;
+                background-image: url("../youkai/point-bar.png");
+                background-size: cover;
+            }
+        }
+
+        .menu{
+            width: 20%;
+            height: 2%;
+            margin-top: 10%;
+            .menu-bar{
+                width: 100%;
+                padding-top: 100%;
+                margin-top: 15%;
+                //background-color: black;
+                background-image: url("../youkai/kamon1.png");
+                background-size: cover;
+            }
+            .menu-name{
+                display: flex;
+                justify-content: center;
+                font-size: 1.5vw;
+            }
+        }
+
+        .options{
+            margin-top: 5%;
+            width: 70%;
+            height: 40%;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            justify-content: space-around;
+
+            .option{
+                width: 27%;
+                height: 35%;
+                //background-color: rgb(163, 41, 137);
+                background-color: rgb(93, 17, 74);
+                margin-bottom: 5%;
+                color: white;
+                writing-mode: vertical-rl;
+                display: flex;
+                align-items: center;
+                font-size: 1vw;
+            }
+
+        }
+
+        .sns{
+            display: flex;
+            justify-content: space-around;
+            
+            width: 50%;
+            
+            .insta{
+                width: 20%;
+                padding-top: 10%;
+                //background-color: black;
+                i{
+                    font-size: 4rem;
+                    color: purple;
+                }
+            }
+            .twitter{
+                width: 20%;
+                padding-top: 10%;
+                //background-color: black;
+                i{
+                    font-size: 4rem;
+                    color: purple;
+                }
+            }
+        }
+    }
+}
+
+
+
+.jikken{
+    width: 100%;
+    height: 2000px;
+}
+
+.merchandise{
+    $border:7px double black;
+    position: absolute;
+    left: 2%;
+    width: 85%;
+    height: 86%;
+    bottom: 0;
+    //background-color: rgb(250, 2, 2);
+    .produces-window{
+        width: 90%;
+        height: 85%;
+        margin-left: 5%;
+        margin-top:5%;
+        //background-color: green;
+        display: flex;
+        flex-direction: column;
+        $color1:rgb(181, 22, 22);
+        $color2:rgb(147, 11, 143);
+        $color3:rgb(190, 151, 20);
+        $color4:rgb(17, 138, 14);
+        
+        .up{
+            width: 50%;
+            height: 9%;
+            //background-color: aqua;
+            display: flex;
+            .button{
+                width: 25%;
+                height: 100%;
+                //border: solid;
+                color: white;
+                font-size: 1.5vw;
+                display: flex;
+                align-items: center;
+                padding-top: 2%;
+                padding-left: 2%;
+                
+                border-top: $border;
+                border-left: $border;
+                border-right: $border;
+                z-index: 10;
+                
+                
+            }
+            #button1{
+                background-color: $color1;
+                border-bottom: $border;
+                transition: 0.5s;
+                &.active{
+                    border-bottom:none;
+                    margin-top: 1.5%;
+                    transition: 0.5s;
+                }
+                
+            }
+            #button2{
+                background-color: $color2;
+                border-bottom: $border;
+                transition: 0.5s;
+                &.active{
+                    border-bottom:none;
+                    margin-top: 1.5%;
+                    transition: 0.5s;
+                }
+            }
+            #button3{
+                background-color: $color3;
+                border-bottom: $border;
+                transition: 1s;
+                &.active{
+                    border-bottom:none;
+                    margin-top: 1.5%;
+                    transition: 0.5s;
+                }
+            }
+            #button4{
+                background-color: $color4;
+                border-bottom: $border;
+                transition: 0.5s;
+                &.active{
+                    border-bottom:none;
+                    margin-top: 1.5%;
+                    transition: 0.5s;
+                }
+            }
+        }
+        .bottom{
+            width: 100%;
+            height: 91%;
+            
+            //background-color: brown;
+            position: relative;
+            .window{
+                width: 100%;
+                height: 100%;
+                border: $border;
+                position: absolute;
+                overflow: auto;
+                //border: solid;
+                transition: 1s;
+                
+                .window-scroll{
+                    width: 100%;
+                    //height: 500%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 1%;
+                    padding-bottom: 3%;
+                    
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    align-items: center;
+                    transition: 1s;
+                    
+ 
+                        .produce{
+                            width: 20%;
+                            height: 300px;
+                            //border: solid;
+                            margin-top: 3%;
+                            margin-right: 1%;
+                            margin-left: 1%;
+                            background-color: antiquewhite;
+
+                            display: flex;
+                            flex-direction: column;
+                            position: relative;
+
+                            transition: 1s;
+
+                            .produce-picture{
+                                width: 100%;
+                                height: 70%;
+                                //background-color: red;
+                                background-image: url("../youkai/notes.jpg");
+                                background-size: cover;
+                            }
+                            .mini-cart{
+                               position: absolute; 
+                               width: 40px;
+                               height: 40px;
+                               background-image: url("../youkai/shoppingcar.png");
+                               background-size: cover;
+                               //animation: 1s linear alternate infinite carts;
+                               //background-color: red;
+                                &.active{
+                                    animation:1s linear zoomer;                               
+                                    
+                                }
+                            }
+
+                            
+                            .produce-detail{
+                                width: 100%;
+                                height: 30%;
+                                //background-color: rebeccapurple;
+                                position: relative;
+
+                                .produce-name{
+                                    font-size: 1vw;
+                                    width: 60%;
+                                    top: 20%;
+                                    position: absolute;
+                                }
+                                .produce-price{
+                                    position: absolute;
+                                    font-size: 2vw;
+                                    right: 5%;
+                                    top: 20%;
+                                }
+                                .produce-document{
+                                    position: absolute;
+                                    bottom: 0;
+                                }
+                            }
+                    }
+                }
+            }
+            #window1{
+                background-color: $color1;
+                display: none;
+                transition: 1s;
+                &.active{
+                    display: block;
+                    transition: 1s;
+                    .produce{
+                        width: 20%;
+                    }
+                }
+                
+            }
+            #window2{
+                background-color: $color2;
+                display: none;
+                transition: 1s;
+                &.active{
+                    display: block;
+                    transition: 1s;
+                    .produce{
+                        width: 20%;
+                    }
+                }
+            }
+            #window3{
+                background-color: $color3;
+                display: none;
+                transition: 1s;
+                &.active{
+                    display: block;
+                    transition: 1s;
+                    .produce{
+                        width: 20%;
+                    }
+                }
+            }
+            #window4{
+                
+                background-color: $color4;
+                display: none;
+                transition: 1s;
+                &.active{        
+                    display: block;
+                    transition: 1s;
+                    .produce{
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mixamize{
+    position: absolute;
+    width: 5%;
+    height: 150px;
+    //background-color: red;
+    background-image: url("../youkai/take-waku.png");
+    background-size: 100% 100%;
+    top: 29%;
+    left: 0.6%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0.9%;
+    padding-bottom: 0.5%;
+    
+
+   
+}
+
+.cart{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    bottom: 3%;
+    &.active{
+        animation:1s linear zoomer; 
+    }
+    
+    //background-color: red;
+    .cart-past{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .cart-logo{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("../youkai/shoppingcar.png");
+            background-size: cover;
+            
+        }
+    
+        .cart-count{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            bottom: 20px;
+            right: 18px;
+        }
+    }
+}
+
+.record{
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    background-color: rgb(0, 0, 0,0.8);
+    z-index: -1;
+    opacity: 0;
+    bottom: 3%;
+    left: 5.5%;
+    transition: 1s;
+    border: solid rgb(175, 142, 23) 5px;
+    border-radius: 20px;
+    
+    .record-past{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-top: 6%;
+
+        .records-holder{
+            position: absolute;
+            //background-color: red;
+            width: 80%;
+            height: 520px;
+
+
+
+            .record-row{
+                width: 100%;
+                height: 14%;
+                //background-color: red;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2,1fr);
+                margin-top: 6%;
+                transition: 1s;
+    
+                .record-picture{
+                    grid-column: 1;
+                    grid-row: 1/3;
+                    //background-color: rebeccapurple;
+                    background-image: url("../youkai/anime-files.jpg");
+                    background-size: 100%, 100%;
+                    position: relative;
+
+                    .garbage-box{
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        //background-color: red;
+                        background-image: url(../youkai/garbage-box.png);
+                        background-size: 100%, 100%;
+
+                    }
+                    
+                }
+                .record-name{
+                    grid-column: 2/4;
+                    grid-row: 1;
+                    //background-color: green;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.3rem;
+                    color: white;
+                }
+                .record-detail{
+                    grid-column: 2/4;
+                    grid-row: 2;
+                    //background-color: blue;
+                    display: flex;
+                    flex-direction: row;
+                    
+    
+                    .record-counter{
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 2.5rem;
+                        color: white;
+                    }
+                    .record-price{
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 1.7rem;
+                        padding-left: 20px;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .total{
+            position: absolute;
+            width: 80%;
+            height: 50px;
+            //background-color: aqua;
+            bottom: 30px;
+
+            .total-past{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                .total-title{
+                    position: absolute;
+                    width: 50%;
+                    height: 70%;
+                    //background-color: aqua;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 2.5rem;
+                    color: white;
+                }
+                .total-yen{
+                    position: absolute;
+                    width: 50%;
+                    height: 70%;
+                    //background-color: aquamarine;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 3rem;
+                    color: white;
+                }
+                .tuna{
+                    position: absolute;
+                    width: 100%;
+                    height: 50%;
+                    bottom: 0;
+                    background-image: url(../youkai/tuna.png);
+                    background-size: 100% 100%;
+    
+                    
+                }
+            }
+        }
+
+        .next-bar{
+            position: absolute;
+            width: 80%;
+            height: 50px;
+            //background-color: antiquewhite;
+            bottom: 30px;
+        }
+
+    }
+}
+
+.profile-edit{
+    position: absolute;
+    width: 75%;
+    height: 85%;
+    top: 8%;
+    left: 12%;
+    //background-color: rgb(52, 49, 49);
+    background-image: url("../youkai/washi.jpg");
+    z-index: -1;
+    opacity: 0;
+    overflow: auto;
+    transition: 1s;
+    //display: none;
+    
+
+    
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .profile-edit-scroll{
+        width: 100%;
+        height: 2000px;
+        
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .edit-title{
+            font-size: 5rem;
+            margin-top: 3%;
+            //position: fixed;
+        }
+
+        
+            
+        label{
+            font-size: 2.5rem;
+            width: 40%;
+            margin-top: 15%;
+            
+            input{
+                width: 70%;
+                height: 140%;
+                font-size: 2rem;
+            }
+        
+        }
+
+        .youkai-edit{
+            margin-top: 15%;
+            position: relative;
+            width: 90%;
+            height: 460px;
+            //background-color: rgb(187, 114, 114);
+            // border-radius: 50px;
+            .youkai-edit-title{
+                position: absolute;
+                left: 20%;
+                font-size: 4rem;
+            }
+            .youkai-edit-avatar{
+                position: absolute;
+                width: 15%;
+                height: 15%;
+                z-index: 10;
+                top: -15%;
+                left: 2%;
+                .profile-picture{
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    padding-top: 100%;
+                    background-image: url("../youkai/profile-maru.png");
+                    background-size: cover;
+                    
+                    // span + .profile-maru{
+                    //     background-color: red;
+                        
+                    // }
+                }
+                .profile-maru2{
+                    position: absolute;
+                    top: 7%;
+                    right: 5%;
+                    width: 90%;
+                    padding-top: 90%;
+                    border-radius: 50%;
+                    background-image: url("../youkai/youkai10.png");
+                    background-size: cover;
+                    background-color: rgb(141, 32, 126);  
+                    transition: all 0.5s 0s ease;
+                }
+            }
+            .youkai-edit-window{
+                position: absolute;
+                width: 100%;
+                height: 400px;
+                background-color: rgb(169, 56, 8);
+                border-radius: 50px;
+                bottom: 0%;
+                overflow: auto;
+
+                .youkai-edit-window-scroll{
+                    width: 100%;
+                    //height: 1000px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-around;
+                    margin-top: 5%;
+
+                    .one-youkai{
+                        width: 200px;
+                        height: 200px;
+                        margin-left: 1%;
+                        margin-right: 1%;
+                        margin-bottom: 4%;
+                        background-color: rgb(36, 36, 36);
+                        border-radius: 100px;
+                        background-image: url("../youkai/youkai10.png");
+                        background-size: cover;
+                        //border: solid;
+                        transition: 1s;
+
+                        &:hover{
+                            transform: scale(1.2);
+                            transition: 1s;
+                        }
+                    }
+                }
+            }
+        }
+
+        .color-change{
+            width: 90%;
+            height: 500px;
+            //background-color: rebeccapurple;
+            margin-top: 50px;
+            z-index: 2;
+            display: flex;
+            
+            flex-direction: column;
+            .color-change-title{
+                font-size: 4rem;
+                margin-top: 20px;
+                width: 100%;
+                height: 10%;
+                text-align: center;
+                
+            }
+            .color-change-window{
+                width: 100%;
+                height: 90%;
+                //background-color: antiquewhite;
+                display: flex;
+                flex-direction: row;
+                .color-change-window-left{
+                   width: 60%; 
+                   height: 100%;
+                   //border: solid 5px rgb(167, 141, 24);
+                   border-top-left-radius: 20px;
+                   border-bottom-left-radius: 20px;
+                   background-color: rgba(59, 51, 51, 0.6);
+                   display: flex;
+                   flex-direction: row;
+                   justify-content: space-around;
+                   flex-wrap: wrap;
+                   align-items: center;
+                   .each-color-tag{
+
+                    width: 70px;
+                    height: 100px;
+                    background-color: rgb(255, 104, 16);
+                    color: white;
+                    margin-right: 50px;
+                    margin-left: 20px;
+                    //margin-top: -100px;
+                    -ms-writing-mode: tb-rl;
+                    writing-mode: vertical-rl;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 2rem;
+                    cursor: pointer;
+                    transition: 0.5s;
+
+                    &:hover{
+                        transform: scale(1.2);
+                        transition: 0.5s;
+                    }
+                   }
+                }
+                .color-change-window-right{
+                    width: 40%;
+                    height: 100%;
+                    //border: solid 5px rgb(167, 141, 24);
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    position: relative;
+                    background-color: black;
+                    display: flex;
+                    align-items: center;
+                    
+                   
+                    .header{
+                        position: absolute;
+                        width: 35%;
+                        height: 90%;
+                        left: 35%;
+
+                        .option{
+                            font-size: 2px;
+                        }
+
+                        
+                    }
+                }
+            }
+
+        }
+
+        .edit-submit{
+            width: 100%;
+            height: 70px;
+            //background-color: red;
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .submit-button{
+                width: 20%;
+                height: 100%;
+                background-color: antiquewhite;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.8rem;
+                border: solid;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+.blackBack{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: fixed;
+    
+    //display: none;
+    z-index: -1;
+    opacity: 0;
+    position: relative;
+    
+    transition: 1.5s;
+    .cross-sign{
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        color: rgb(255, 255, 255, 0.7);
+        font-size: 5rem;
+        cursor: pointer;
+    }
+}
+
+.menu-big{
+    position: fixed;
+    top: 0;
+    z-index: -555;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+
+}
+
+
+.layer-big{
+    width: 100%;
+    height: 100%;
+    background-image: url("../youkai/youkai-menu.jpg");
+    background-size: cover;
+    position: absolute;
+    
+
+}
+
+.layer-big::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0%;
+    background-color: rgb(249, 252, 255);   
+    opacity: 0.6;
+    
+}
+
+.menu-logo-big{
+    background-image: url("../youkai/youkai-logo.png");
+    background-size: cover;
+    position: absolute;
+    width: 26%;
+    height: 8%;
+    top: 45%;
+    left: 3%;
+}
+
+.close-button-big{
+    position: absolute;
+    font-size: 5rem;
+    top: 3%;
+    right: 4%;
+    cursor: pointer;
+}
+
+.login-big{
+    position: absolute;
+    font-size: 3rem;
+    top: 60%;
+    left: 50%;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+.back-main-big{
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.login-big:hover{
+    text-decoration: underline;
+}
+
+@keyframes appearing{
+    0%{opacity: 0;}
+    50%{opacity: 0.5;}
+    100%{opacity: 1;}
+}
+
+@keyframes carts{
+    0%{transform: rotate(-10deg);}
+    25%{transform: rotate(0deg);}
+    50%{transform: rotate(10deg);}
+    100%{transform: rotate(0deg);}
+}
+
+@keyframes zoomer{
+    0%{transform:scale(1) rotate(-10deg);}
+    25%{transform:rotate(0deg);}
+    50%{transform:scale(2) rotate(10deg);}
+    100%{transform:scale(1) rotate(0deg);}
+}

@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "wahu";
+  src: url("../fonts/wahu2.otf") format("opentype");
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "wahu";
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: "wahu";
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-size: 100px;
+  height: 100%;
+}
+
+.layer {
+  width: 100%;
+  height: 100%;
+  background-image: url("../youkai/youkai-menu.jpg");
+  background-size: cover;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.layer .login-box {
+  width: 30%;
+  height: 70%;
+  background-color: rgb(8, 3, 66);
+  border-radius: 10%;
+  position: relative;
+}
+.layer .login-box .login-flag {
+  background-image: url("../youkai/login-flag.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.layer .login-box .login-title {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  left: 20%;
+  top: 10%;
+  background-image: url("../youkai/login-title.png");
+  background-size: cover;
+  width: 60%;
+  height: 19%;
+}
+.layer .login-box form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 70%;
+  bottom: 0;
+  position: absolute;
+}
+.layer .login-box form .box {
+  width: 60%;
+  height: 15%;
+  background-color: rgba(175, 166, 166, 0.9);
+  color: white;
+  border-color: rgb(204, 158, 41);
+  border-radius: 20px;
+  text-align: center;
+}
+.layer .login-box form #email {
+  font-size: 1.6rem;
+  font-family: serif;
+}
+.layer .login-box form #password {
+  font-size: 1.7rem;
+  font-family: serif;
+}
+.layer .login-box form #button {
+  font-size: 1.7rem;
+}
+
+.layer::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  background-color: rgb(249, 252, 255);
+  opacity: 0.6;
+}
+
+/*# sourceMappingURL=login.css.map */

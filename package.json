@@ -1,0 +1,25 @@
+{
+  "name": "middleprojectiwatani",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"sass sass/shop.scss css/shop.css -w",
+    "compile:sass2":"sass sass/login.scss css/login.css -w",
+    "dev":"serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/junkun0129/middleprojectiwatani.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/junkun0129/middleprojectiwatani/issues"
+  },
+  "homepage": "https://github.com/junkun0129/middleprojectiwatani#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

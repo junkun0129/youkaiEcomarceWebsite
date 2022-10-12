@@ -1,0 +1,1889 @@
+@font-face {
+    font-family: "wahu";
+    src: url("../fonts/wahu2.otf") format("opentype");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "wahu";
+    box-sizing: border-box;
+    font-size: 10px;
+    
+    
+    
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url("../youkai/washi.jpg");
+    height: 100%;
+    position: relative;
+}
+
+
+
+@media screen and (max-width:768px) {
+    header{
+        position: relative;
+        overflow: hidden;
+    }
+
+    header.scroll{
+        width: 100%;
+        height: 100px;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        z-index: 10;
+        transition: 0.5s;
+        
+        
+    }
+
+    
+
+    header .main-logo{
+        position: absolute;
+        font-size: 3rem;
+        left: 3%;
+        margin-top: 0%;
+        
+    }
+    header.scroll .main-logo{
+        position: absolute;
+        font-size: 1rem;
+        left: 3%;
+        margin-top: 0%;
+        top: 15%;       
+    }
+
+    .main-menu{
+        position: absolute;
+        right: 10%;
+        width: 20px;
+        height: 20px;
+        top: -30px;
+        margin-top: 0%;
+
+    }
+  }
+
+
+
+header{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 10;
+    transition: 0.5s;
+    
+    
+}
+
+.main-logo{
+    margin-top: 50px;
+    font-size: 7rem;
+    transition: 0.5s;
+}
+
+
+
+header.scroll{
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    z-index: 10;
+    transition: 0.5s;
+    background-image: url("../youkai/washi.jpg");
+}
+
+
+header.scroll .main-logo{
+    margin-top: 25px;
+    font-size: 5rem;
+    transition: 0.5s;
+}
+
+
+
+header a{
+    position: absolute;
+    right: 100px;
+    transition: 0.5s;
+}
+
+header a::after{
+    content: "";
+    position: absolute;
+    right:-25px;
+    top: 17px;
+    width: 110px;
+    height: 110px;
+    background: url("../youkai/maru2.png") 00 no-repeat;
+    background-size: cover;
+    /* background-color: red; */
+    transition: 0.5s;
+    display: none;
+}
+
+header a:hover::after{
+    animation: appear 3.5s ease;
+    display: inline-block;
+}
+
+header.scroll a::after{
+    content: "";
+    position: absolute;
+    display: none;
+    right:-20px;
+    top: -8px;
+    width: 100px;
+    height: 100px;
+    background: url("../youkai/maru.png") 00 no-repeat;
+    background-size: cover;
+    /* background-color: red; */
+    transition: 0.5s;
+}
+
+header.scroll a:hover::after{
+    animation: appear 3.5s ease;
+    display: inline-block;
+}
+
+
+header img{
+    width: 50px;
+    height: 50px;
+    margin-top: 50px;
+}
+
+header.scroll img{
+    margin-top: 20px;
+}
+
+
+
+
+
+header.scroll .jinja1{
+    display: none;    
+}
+
+header .jinja2{
+    display: none;
+   
+}
+
+header.scroll .jinja2{
+   display: inline-block;
+   animation: appear 3.5s ease;
+}
+
+@keyframes appear{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.menu{
+    position: fixed;
+    z-index: 11111;
+    width: 100%;
+    height: 100%;
+}
+
+
+.layer{
+    width: 100%;
+    height: 100%;
+    background-image: url("../youkai/youkai-menu.jpg");
+    background-size: cover;
+    position: absolute;
+    
+
+}
+
+.layer::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0%;
+    background-color: rgb(249, 252, 255);   
+    opacity: 0.6;
+    
+}
+
+.menu-logo{
+    background-image: url("../youkai/youkai-logo.png");
+    background-size: cover;
+    position: absolute;
+    width: 26%;
+    height: 8%;
+    top: 45%;
+    left: 3%;
+}
+
+.close-button{
+    position: absolute;
+    font-size: 5rem;
+    top: 3%;
+    right: 4%;
+    cursor: pointer;
+}
+
+.login{
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.login:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width:768px){
+    .hero{
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+
+.hero{
+    width: 100%;
+    height: 720px;
+    background-image: url("../youkai/original.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: change 30s infinite ease;
+    position: relative;
+
+}
+
+
+@keyframes change{
+    0%
+    {
+        background-image: url("../youkai/title11.png");
+    }
+    20%
+    {
+        background-image: url("../youkai/title10.png");
+    }
+    40%
+    {
+        background-image: url("../youkai/title8.png");
+    }
+    60%
+    {
+        background-image: url("../youkai/title4.png");
+    }
+    80%
+    {
+        background-image: url("../youkai/title7.png");
+    }
+    100%
+    {
+        background-image: url("../youkai/title6.png");
+    }
+
+}
+
+.phrase{
+  color: white;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  font-size: 4rem;
+  padding-top: 50px;
+}
+
+@media screen and (max-width:768px) {
+    .notice{
+        position: absolute;
+    left: 30px;
+    bottom: 50px;
+    width: 100px;
+    height: 100px;
+        background-color: rgb(0, 0, 0, 0.6);
+       
+        
+    }
+
+    .notice a{
+        display: flex;
+        justify-content: center;
+    }
+
+    .notice-info{
+       
+        
+    }
+
+    .notice-image{
+        display: none;
+    }
+}
+
+
+.notice{
+    position: absolute;
+    left: 30px;
+    bottom: 50px;
+    width: 500px;
+    height: 100px;
+    
+}
+
+.notice a{
+    display: flex;
+    align-items: space;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.notice a:hover{
+    text-decoration: underline;
+}
+
+.notice-image{
+    height: 100px;
+    width: 150px;
+    background-image: url("../youkai/title4.png");
+    background-size: cover;
+}
+
+.notice-info{
+    margin-left: 20px;
+}
+
+.notice-info div{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.notice-info .middle{
+    font-size: 22px;
+}
+
+.load{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 720px;
+    background-image: url("../youkai/washi.jpg");
+    animation: loading 20s ;
+    animation-fill-mode: forwards;
+    animation-timing-function:cubic-bezier(.99,0,.41,1);
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    
+}
+
+.load-text{
+    font-size: 2.5rem;
+    margin: 60px;
+    color: rgb(0, 0, 0, 0);
+}
+
+#text1:before{
+    content: attr(data-content);
+    position: absolute;
+    overflow: hidden;
+    max-width: 10rem;
+    color: black;
+    animation: text1 10s linear;
+    
+}
+#text2:before{
+    content: attr(data-content);
+    position: absolute;
+    overflow: hidden;
+    max-width: 10rem;
+    color: black;
+    animation: text1 10s linear;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+#text3:before{
+    content: attr(data-content);
+    position: absolute;
+    overflow: hidden;
+    max-width: 10rem;
+    color: black;
+    animation: text1 10s linear;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+#text4:before{
+    content: attr(data-content);
+    position: absolute;
+    overflow: hidden;
+    max-width: 10rem;
+    color: black;
+    animation: text1 10s linear;
+    animation-delay: 3s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes text1{
+    from{max-width:0;}
+}
+
+.raijin{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.huujin{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+
+@keyframes loading{
+    0%{
+      z-index: 100;
+      opacity: 1;
+    }
+    80%{
+      opacity: 0;
+
+    }
+    100%{
+      z-index: -100;
+      opacity: 0;
+    }
+}
+
+.navi{
+    margin-top: 100px;
+    width: 100%;
+    height: 1800px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    position: relative;
+    justify-content: space-around;
+    align-items: flex-start;
+    display: none;
+}
+
+.textman{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.navi-text{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.navi-text2{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    font-size: 2.1rem;
+    color: aliceblue;
+    padding-right: 50px;
+
+    
+}
+
+.navi div{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 50px;
+   
+    
+}
+
+.navi > div:nth-of-type(2) ,.navi > div:nth-of-type(4){
+    align-self: flex-end;
+    
+}
+
+.navi-info1{
+    background-color: rgb(8, 56, 99);
+    display: flex;
+
+}
+
+
+.navi-info1 .navi-picture{
+    background-image: url("../youkai/title7.png");
+    background-size: cover;
+}
+
+.navi-info1 .navi-text{
+    color: white;
+    font-size: 3rem;
+    padding: 0px;
+
+}
+.navi-info2{
+    background-color: rgb(125, 10, 10);
+    display: flex;
+}
+
+.navi-info2 .navi-picture{
+    background-image: url("../youkai/navi2.png");
+    background-size: cover;
+}
+
+.navi-info2 .navi-text{
+    color: white;
+    font-size: 3rem;
+    
+}
+.navi-info3{
+    background-color: rgb(151, 111, 8);
+    display: flex;
+}
+
+.navi-info3 .navi-picture{
+    background-image: url("../youkai/navi3.png");
+    background-size: cover;
+}
+
+.navi-info3 .navi-text{
+    color: white;
+    font-size: 3rem;
+    
+}
+.navi-info4{
+    background-color: rgb(80, 4, 97);
+    display: flex;
+}
+
+.navi-info4 .navi-picture{
+    background-image: url("../youkai/navi4.png");
+    background-size: cover;
+}
+
+.navi-info4 .navi-text{
+    color: white;
+    font-size: 3rem;
+    
+} 
+
+
+@media screen and (max-width:768px){
+    
+    .anai{
+       display: none !important;
+    }
+
+    .navi{
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+    }
+   
+}
+
+
+
+.anai{
+    width: 100%;
+    height: 2000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 70px;
+    overflow: hidden;
+   
+}
+
+.anai div{
+    width: 30%;
+    height: 500px;
+    
+    
+}
+
+.anai .anai1{
+    background-image: url("../youkai/title7.png"); 
+    background-position: left;
+    background-size: 700px 500px;
+    margin-right: 60px;
+    margin-top: 200px;
+    position: relative; 
+    display: flex;
+    background-attachment: fixed;
+    
+}
+
+.anai1 .text{
+    position: absolute;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+    
+}
+
+.anai1  .youkaigo{
+    color: white;
+    font-size: 2.2rem;
+    height: 400px;
+    width: 100%;
+    margin-top: 50px;
+    position: absolute;
+    right: 50px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    opacity: 1;
+    z-index: 1;
+    
+}
+
+.anai1 .youkaigo span{
+    font-size: 2.5rem;
+    animation: youkaigo .6s ease-out forwards;
+}
+
+.anai1 .youkaigo:hover span{
+    display: none;  
+   
+}
+
+.anai1 .youkaigo:hover ~ .nihonngo span{
+    display: block;   
+    animation: youkaigo .6s ease-out forwards;
+}
+
+
+
+
+
+.anai1 .nihonngo{
+    color: white;
+    font-size: 2.2rem;
+    height: 400px;
+    margin-top: 50px;
+    position: absolute;
+    right: 50px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    
+    /* opacity: 0;/ */
+    /* display: none; */
+}
+
+.anai1 .nihonngo span{
+    font-size: 2.5rem;
+    display: none;
+    
+}
+
+
+.anai .anai2{
+    background-image: url("../youkai/navi2.png");
+    margin-left: 60px;
+    margin-top: 550px;
+    background-attachment: fixed;
+    
+    display: flex;
+    position: relative;
+}
+
+.anai2 .text{
+    position: absolute;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    font-size: 80px;
+    padding-right: 10px;
+    right: 0px;
+}
+
+.anai2  .youkaigo{
+    color: white;
+    font-size: 2.2rem;
+    height: 400px;
+    width: 70%;
+    margin-top: 50px;
+    position: absolute;
+    left: 0px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    opacity: 1;
+    z-index: 1;
+}
+
+.anai2 .youkaigo span{
+    font-size: 2.5rem;
+    
+}
+
+.anai2 .youkaigo:hover span{
+    display: none;  
+    animation: youkaigo .6s ease-out forwards;
+     
+}
+
+.anai2 .youkaigo:hover ~ .nihonngo span{
+    display: block;   
+    animation: youkaigo .6s ease-out forwards;
+}
+
+.anai2 .nihonngo{
+    color: white;
+    font-size: 2.2rem;
+    height: 400px;
+    margin-top: 50px;
+    position: absolute;
+    left: 170px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    /* opacity: 0;/ */
+    /* display: none; */
+}
+
+.anai2 .nihonngo span{
+    font-size: 2.5rem;
+    display: none;
+}
+
+@keyframes youkaigo{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1
+    }
+}
+
+
+.anai .anai3{
+    background-image: url("../youkai/navi3.png"); 
+    margin-right: 60px;
+    margin-top: -200px;
+    position: relative; 
+    display: flex;
+    background-attachment: fixed;
+    
+}
+
+.anai3 .text{
+    position: absolute;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    color: white;
+    font-size: 85px;
+    height: 600px;
+    left: -20px;
+    top: 0px;
+}
+
+.anai3  .youkaigo{
+    color: white;
+    font-size: 2.2rem;
+    height: 400px;
+    width: 100%;
+    margin-top: 50px;
+    position: absolute;
+    right: 50px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    opacity: 1;
+    z-index: 1;
+}
+
+.anai3 .youkaigo span{
+    font-size: 2.5rem;
+}
+
+.anai3 .youkaigo:hover span{
+    display: none;  
+    animation: youkaigo .6s ease-out forwards;
+     
+}
+
+.anai3 .youkaigo:hover ~ .nihonngo span{
+    display: block;   
+    animation: youkaigo .6s ease-out forwards;
+}
+
+.anai3 .nihonngo{
+    color: white;
+    font-size: 2.2rem;
+    height: 400px;
+    margin-top: 50px;
+    position: absolute;
+    right: 50px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    /* opacity: 0;/ */
+    /* display: none; */
+}
+
+.anai3 .nihonngo span{
+    font-size: 2.5rem;
+    display: none;
+}
+
+.anai .anai4{
+    background-image: url("../youkai/title7.png");
+    margin-left: 60px;
+    margin-top: 300px;
+    background-attachment: fixed;
+}
+.anai4 .text{
+    position: absolute;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 80px;
+}
+
+.anai .anai4{
+    background-image: url("../youkai/navi4.png");
+    margin-left: 60px;
+    margin-top: 300px;
+    background-attachment: fixed;
+    
+    display: flex;
+    position: relative;
+}
+
+.anai4 .text{
+    position: absolute;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    font-size: 100px;
+    padding-right: 10px;
+    right: 0px;
+}
+
+.anai4  .youkaigo{
+    color: white;
+    font-size: 2.2rem;
+    height: 400px;
+    width: 70%;
+    margin-top: 50px;
+    position: absolute;
+    left: -20px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    opacity: 1;
+    z-index: 1;
+}
+
+.anai4 .youkaigo span{
+    font-size: 2.5rem;
+}
+
+.anai4 .youkaigo:hover span{
+    display: none;  
+    animation: youkaigo .6s ease-out forwards;
+     
+}
+
+.anai4 .youkaigo:hover ~ .nihonngo span{
+    display: block;  
+    animation: youkaigo .6s ease-out forwards; 
+}
+
+.anai4 .nihonngo{
+    color: white;
+    font-size: 2.2rem;
+    height: 400px;
+    margin-top: 50px;
+    position: absolute;
+    left: 150px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    /* opacity: 0;/ */
+    /* display: none; */
+}
+
+.anai4 .nihonngo span{
+    font-size: 2.5rem;
+    display: none;
+}
+
+
+.anai .catchletter{
+    position: absolute;
+    color: black;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    right: 50%;
+    top: 700px;
+    font-size: 5rem;
+    height: 1000px;
+}
+
+
+
+.anai .hitotu{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/hitotu.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    margin-bottom: 50px;
+    
+    animation: 2s  ease-in-out 0.5s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk2;    
+}
+.anai .jiji{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/jiji.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    
+    
+    animation: 2s  ease-in-out 1s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk3;    
+}
+.anai .kozou{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/kozou.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    
+    
+    animation: 2s  ease-in-out 0s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk4;    
+}
+.anai .tako{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/tako.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    
+    
+    animation: 2s  ease-in-out 1.5s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk5;    
+}
+.anai .neko{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/neko.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    
+    
+    animation: 2s  ease-in-out 2s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk6;    
+}
+
+.anai .kapa{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/kapa.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    
+    
+    animation: 2s  ease-in-out 0.5s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk6-5;    
+}
+
+.anai .biwa{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/biwa.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    margin-bottom: 50px;
+    
+    animation: 2s  ease-in-out 1s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk7;    
+}
+.anai .hime{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/hime.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    margin-bottom: 50px;
+    
+    animation: 2s  ease-in-out 0.5s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk8;    
+}
+.anai .kuti{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/kuti.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    margin-bottom: 50px;
+    
+    animation: 2s  ease-in-out 2s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk9;    
+}
+.anai .oni{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/oni.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    margin-bottom: 50px;
+    
+    animation: 2s  ease-in-out 1s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk10;    
+}
+.anai .kumo{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/kumo.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    margin-bottom: 50px;
+    
+    animation: 2s  ease-in-out 0.5s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk11;    
+}
+.anai .onna{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: url("../youkai/onna.png");
+    background-repeat:no-repeat; 
+    background-size: 200px 200px;
+    top: 50px;
+    margin-bottom: 50px;
+    
+    animation: 2s  ease-in-out 2s infinite  forwards running move1, 10s ease-in-out 0s infinite alternate forwards running walk12;    
+}
+
+@keyframes move1{
+    0%{
+        transform: rotate(-35deg);
+    }
+    50%{
+        transform: rotate(35deg);
+    }
+    100%{
+        transform: rotate(-35deg);
+    }
+}
+@keyframes walk1{
+    0%{
+        left: 0px;
+    }
+    
+    100%{
+       left: 1000px;
+    }
+}
+@keyframes walk2{
+    0%{
+        left: 200px;
+    }
+    
+    100%{
+       left: 1200px;
+    }
+}
+@keyframes walk3{
+    0%{
+        left: 400px;
+    }
+    
+    100%{
+       left: 1400px;
+    }
+}
+@keyframes walk4{
+    0%{
+        left: 600px;
+    }
+    
+    100%{
+       left: 1600px;
+    }
+}
+@keyframes walk5{
+    0%{
+        left: 800px;
+    }
+    
+    100%{
+       left: 1800px;
+    }
+}
+@keyframes walk6{
+    0%{
+        left: 1000px;
+    }
+    
+    100%{
+       left: 2000px;
+    }
+}
+@keyframes walk6-5{
+    0%{
+        left: 1200px;
+    }
+    
+    100%{
+       left: 2200px;
+    }
+}
+@keyframes walk7{
+    0%{
+        left: 0px;
+    }
+    
+    100%{
+       left: 1000px;
+    }
+}
+@keyframes walk8{
+    0%{
+        left: -200px;
+    }
+    
+    100%{
+       left: 800px;
+    }
+}
+@keyframes walk9{
+    0%{
+        left: -400px;
+    }
+    
+    100%{
+       left: 600px;
+    }
+}
+@keyframes walk10{
+    0%{
+        left: -600px;
+    }
+    
+    100%{
+       left: 400px;
+    }
+}
+@keyframes walk11{
+    0%{
+        left: -800px;
+    }
+    
+    100%{
+       left: 200px;
+    }
+}
+@keyframes walk12{
+    0%{
+        left: -1000px;
+    }
+    
+    100%{
+       left: 0px;
+    }
+}
+
+.access{
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.access .access-title{
+    position: absolute;
+    top: 0;
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.access .map{
+    top: 150px;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    filter: grayscale(100%) invert(90%) ;
+    
+}
+
+@media screen and (max-width:768px){
+    .tengu img{
+        width: 150px !important;
+        height: 100px !important;
+    }
+    .tengu2 img{
+        width: 150px !important;
+        height: 100px !important;
+        position: absolute;
+        top: 600px !important;
+    }
+
+
+}
+
+
+.tengu img{
+    position: absolute;
+    top: 180px;
+    right: 50px;
+    width: 250px;
+    height: 170px;
+    animation: 3s ease-in-out 0s infinite alternate forwards running tengu;    
+}
+
+@keyframes tengu{
+    0%{
+        right: 0px;
+        transform: rotate(10deg);
+    }
+    
+    100%{
+       right:70px;
+
+       transform: rotate(-10deg);
+    }
+}
+
+.tengu2 img{
+    position:absolute;
+    left: 30px;
+    top: 550px;
+    width: 250px;
+    height: 170px;
+    animation: 3s ease-in-out 0s infinite alternate forwards running tengu2;    
+}
+
+@keyframes tengu2{
+    0%{
+        left: 10px;
+        transform: rotate(-10deg);
+    }
+    
+    100%{
+       left: 80px;
+       transform: rotate(10deg);
+    }
+}
+
+@media screen and (max-width:768px){
+    .access-option{
+        writing-mode: horizontal-tb !important;
+        height: 1100px !important;
+        margin-top: -190px !important;
+    }
+
+    .access-option div{
+        margin-left: 50px !important;
+        margin-top: 80px !important;
+    } 
+
+    .train .line1{
+        position: absolute;
+        top: 100px;
+        left: 20px;
+    }
+    .train .line2{
+        position: absolute;
+        top: 150px;
+        left: 20px;
+    }
+
+    .car .line1{
+        left: 0px !important;
+        top: 100px !important;
+    }
+    .car .line2{
+        left: 0px !important;
+        top: 150px !important;
+    }
+
+    .bus .line1{
+        left: 0px !important;
+        top: 100px !important;
+    }
+    
+}
+
+.access-option{
+    margin-top: 50px;
+    margin-bottom: 0px;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    overflow: hidden;
+    
+}
+
+.access-option div{
+    margin-left: 100px;
+}
+
+.access-option h1{
+    font-size: 8rem;
+}
+
+.access-option p{
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+   
+}
+
+.train{
+    position: relative;
+}
+
+.car{
+    position: relative;
+}
+
+.bus{
+    position: relative;
+}
+
+.line1{
+    position: absolute;
+    left: -90px;
+    top: 50px;
+}
+
+.line2{
+    position: absolute;
+    left: -170px;
+    top: 240px;
+}
+
+.bus p{
+    position: absolute;
+    right: 130px;
+    top: 50px;
+}
+
+/* .switch{
+    position: absolute;
+    bottom: 160px;
+    width: 30%;
+    height: 150px;
+    z-index: 1150;
+
+}
+
+.switch:hover{
+   background-color: red;
+} */
+
+footer{
+    width: 100%;
+    background-color: rgb(224, 204, 227);
+    height: 310px;
+    display: flex;
+    overflow: hidden;
+    
+
+}
+
+@media screen and (max-width:768px){
+    .footer{
+        display: inline;
+    }
+    .footer-youkai{
+       display: none;
+    }
+
+    .footer .footer1{
+        position: relative !important;
+        display: inline !important;
+    }
+
+    .footer .footer-logo{
+        position: absolute !important;
+        width: 500px !important;
+        height: 200px;
+        background-size: 100% 100%;
+        left: 200px;
+        background-color:red !important;
+    }
+
+    .sns{
+        left: 80px;
+        margin-right: 90px;
+    }
+
+    .sns .insta{
+        background-image: url("../youkai/insta.png");
+        width: 40% !important;
+        height: 17% !important;
+        background-size: 100% 100% !important;
+        background-repeat: no-repeat;
+        
+        position: absolute;
+        top: 25%;
+        left: 0 !important;
+    
+    }
+    .sns .tuiter{
+        background-image: url("../youkai/twiiter.png");
+        width: 40% !important;
+        height: 17% !important;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 40% !important;
+        left: 50%;
+    }
+    .sns .line{
+        background-image: url("../youkai/line.png");
+        width: 60% !important;
+        height: 27% !important;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 55% !important;
+        left: -10% !important;
+    }
+    .sns .sonota{
+        background-image: url("../youkai/denwa.png");
+        width: 48% !important;
+        height: 22% !important;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 75% !important;
+        left: 48% !important;
+    }
+}
+
+
+.footer-youkai{
+    position: absolute;
+    width: 100%;
+    height: 310px;
+    bottom:-50;
+    transition-duration: 2s;
+    overflow: hidden;
+    animation: anim-out .6s ease-out forwards;
+}
+
+footer:hover .footer-youkai{
+    animation: anim .6s ease-out forwards;
+    
+}
+
+@keyframes anim {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(750px) translateY(100px);}
+}
+
+@keyframes anim-out {
+    0% {transform: translateX(750px) translateY(100px);}
+    100% {transform: translateX(0);}
+  }
+
+
+
+
+footer .footer1{
+    width: 100%;
+    background-color: rgb(224, 204, 227);
+    height: 310px;
+    display: flex;
+    overflow: hidden;
+    
+
+}
+
+footer .footer-logo{
+    background-image: url("../youkai/header_logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 310px;
+    width: 25%;
+    margin-left: 3%;
+    margin-top: -5%;
+}
+
+.footer-info{
+    height: 310px;
+    width: 35%;
+    display: flex;
+    margin-left: 7%;
+    overflow: hidden;
+
+}
+
+.footer-info ul{
+    list-style: none;
+    list-style-type: none;
+    color: rgb(90, 87, 87);
+}
+
+.footer-info a{
+    text-decoration: none;
+}
+
+
+
+
+
+.footer-info .info1{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.footer-info .info2{
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-info h1{
+    font-size: 3.5rem;
+    position: absolute;
+    top: 15%;
+    left: 2%;
+    color: rgb(90, 87, 87);
+}
+
+.footer-info ul{
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    margin-top: 4%;
+    
+}
+
+.footer-info ul li{
+    font-size: 2rem;
+    margin-bottom: 5%;
+}
+
+.footer-info ul li:hover{
+    text-decoration: underline;
+}
+
+.sns{
+    margin-left: -9%;
+    margin-top: -4%;
+    height: 310px;
+    width: 25%;
+    position: relative;
+    opacity: 0.6;
+    overflow: hidden;
+}
+
+.sns .insta{
+    background-image: url("../youkai/insta.png");
+    width: 20%;
+    height: 25%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+
+}
+.sns .tuiter{
+    background-image: url("../youkai/twiiter.png");
+    width: 17%;
+    height: 22%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 27%;
+    left: 50%;
+}
+.sns .line{
+    background-image: url("../youkai/line.png");
+    width: 27%;
+    height: 33%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 21.5%;
+}
+.sns .sonota{
+    background-image: url("../youkai/denwa.png");
+    width: 21%;
+    height: 27%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 53%;
+    left: 48%;
+}
+
+
+
+
+
+
+.youkais{
+    position: relative;
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+}
+
+.youkais .youkai1{
+    background-image: url("../youkai/youkai1.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    left: 45%;
+    top: -8%;
+}
+.youkais .youkai2{
+    background-image: url("../youkai/youkai2.png");
+    background-size: 100% 100%;
+    width: 15%;
+    height: 70%;
+    position: absolute;
+    right: 0%;
+}
+.youkais .youkai3{
+    background-image: url("../youkai/youkai3.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    bottom: 0%;
+    left: 28%;
+}
+.youkais .youkai4{
+    background-image: url("../youkai/youkai4.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+.youkais .youkai5{
+    background-image: url("../youkai/youkai5.png");
+    background-size: 100% 100%;
+    width: 10%;
+    height: 65%;
+    position: absolute;
+    left: 45%;
+    top: 30%;
+}
+.youkais .youkai6{
+    background-image: url("../youkai/youkai6.png");
+    background-size: 100% 100%;
+    width: 15%;
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+}
+.youkais .youkai7{
+    background-image: url("../youkai/youkai7.png");
+    background-size: 100% 100%;
+    width: 15%;
+    height: 70%;
+    position: absolute;
+    left: 35%;
+}
+.youkais .youkai8{
+    background-image: url("../youkai/youkai8.png");
+    background-size: 100% 100%;
+    width: 30%;
+    height: 70%;
+    position: absolute;
+    left: 15%;
+    bottom: -5%;
+}
+.youkais .youkai9{
+    background-image: url("../youkai/youkai9.png");
+    background-size: 100% 100%;
+    width: 17%;
+    height: 90%;
+    position: absolute;
+    left: 0%;
+    bottom: -25%;
+}
+.youkais .youkai10{
+    background-image: url("../youkai/youkai10.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 70%;
+    position: absolute;
+    left: 35%;
+    bottom: -20%;
+}
+.youkais .youkai11{
+    background-image: url("../youkai/youkai11.png");
+    background-size: 100% 100%;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    bottom: -5%;
+}
+.youkais .youkai12{
+    background-image: url("../youkai/youkai12.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 60%;
+    position: absolute;
+    left: 60%;
+    top: -15%;
+}
+.youkais .youkai13{
+    background-image: url("../youkai/youkai13.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    left: 62%;
+    bottom: -30%;
+}
+.youkais .youkai14{
+    background-image: url("../youkai/youkai14.png");
+    background-size: 100% 100%;
+    width: 30%;
+    height: 110%;
+    position: absolute;
+    left: 70%;
+    top:0%;
+}
+.youkais .youkai15{
+    background-image: url("../youkai/youkai15.png");
+    background-size: 100% 100%;
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    left: 10%;
+    bottom:-10%;
+}
+.youkais .youkai16{
+    background-image: url("../youkai/youkai16.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom:10%;
+}
+.youkais .youkai17{
+    background-image: url("../youkai/youkai17.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    right: 50%;
+    bottom:10%;
+}
+.youkais .youkai18{
+    background-image: url("../youkai/youkai18.png");
+    background-size: 100% 100%;
+    width: 20%;
+    height: 80%;
+    position: absolute;
+    right: 17%;
+    bottom:10%;
+}
+.youkais .youkai19{
+    background-image: url("../youkai/youkai19.png");
+    background-size: 100% 100%;
+    width: 15%;
+    height: 80%;
+    position: absolute;
+    right: -5%;
+    bottom:0%;
+}
+.youkais .youkai20{
+    background-image: url("../youkai/youkai20.png");
+    background-size: 100% 100%;
+    width: 30%;
+    height: 80%;
+    position: absolute;
+    right: -5%;
+    top:-10%;
+}
+
+
